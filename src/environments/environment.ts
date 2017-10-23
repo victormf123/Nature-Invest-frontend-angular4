@@ -5,5 +5,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:3000'
+  api: 'http://localhost:3000',
+  aopi: 'http://localhost:3003/oapi',
+  private_api:  'http://localhost:3003/api'
 };

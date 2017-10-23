@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Injectable } from '@angular/core';
 import { ShoppingCartService } from '../restaurante-detail/shopping-cart/shopping-cart.service';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { MEAT_API } from '../app.api';
 var OrderService = (function () {
     function OrderService(cartService, http) {
@@ -32,20 +32,17 @@ var OrderService = (function () {
         return this.cartService.total();
     };
     OrderService.prototype.checkOrder = function (order) {
-        var headers = new Headers();
-        headers.append('Content-Type', 'application/json');
-        return this.http.post(MEAT_API + "/orders", JSON.stringify(order), new RequestOptions({ headers: headers }))
-            .map(function (response) { return response.json(); })
+        return this.http.post(MEAT_API + "/orders", order)
             .map(function (order) { return order.id; });
     };
     OrderService.prototype.clear = function () {
         this.cartService.clear();
     };
+    OrderService = __decorate([
+        Injectable(),
+        __metadata("design:paramtypes", [ShoppingCartService, HttpClient])
+    ], OrderService);
     return OrderService;
 }());
-OrderService = __decorate([
-    Injectable(),
-    __metadata("design:paramtypes", [ShoppingCartService, Http])
-], OrderService);
 export { OrderService };
 //# sourceMappingURL=order.service.js.map

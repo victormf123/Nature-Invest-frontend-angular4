@@ -18,15 +18,15 @@ var RestaurantesComponent = (function () {
         this.restauranteService.restaurantes()
             .subscribe(function (restaurantes) { return _this.restaurantes = restaurantes; });
     };
+    RestaurantesComponent = __decorate([
+        Component({
+            selector: 'mt-restaurantes',
+            templateUrl: './restaurantes.component.html',
+            styleUrls: ['./restaurantes.component.css']
+        }),
+        __metadata("design:paramtypes", [RestaurantesService])
+    ], RestaurantesComponent);
     return RestaurantesComponent;
 }());
-RestaurantesComponent = __decorate([
-    Component({
-        selector: 'mt-restaurantes',
-        templateUrl: './restaurantes.component.html',
-        styleUrls: ['./restaurantes.component.css']
-    }),
-    __metadata("design:paramtypes", [RestaurantesService])
-], RestaurantesComponent);
 export { RestaurantesComponent };
 //# sourceMappingURL=restaurantes.component.js.map

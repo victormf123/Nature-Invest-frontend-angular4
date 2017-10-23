@@ -17,23 +17,23 @@ var MenuItemComponent = (function () {
     MenuItemComponent.prototype.emitAddEvent = function () {
         this.add.emit(this.menuItem);
     };
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], MenuItemComponent.prototype, "menuItem", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], MenuItemComponent.prototype, "add", void 0);
+    MenuItemComponent = __decorate([
+        Component({
+            selector: 'mt-menu-item',
+            templateUrl: './menu-item.component.html',
+            styleUrls: ['./menu-item.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], MenuItemComponent);
     return MenuItemComponent;
 }());
-__decorate([
-    Input(),
-    __metadata("design:type", Object)
-], MenuItemComponent.prototype, "menuItem", void 0);
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], MenuItemComponent.prototype, "add", void 0);
-MenuItemComponent = __decorate([
-    Component({
-        selector: 'mt-menu-item',
-        templateUrl: './menu-item.component.html',
-        styleUrls: ['./menu-item.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], MenuItemComponent);
 export { MenuItemComponent };
 //# sourceMappingURL=menu-item.component.js.map

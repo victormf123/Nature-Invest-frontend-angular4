@@ -16,23 +16,23 @@ var DeliveryCostsComponent = (function () {
     DeliveryCostsComponent.prototype.total = function () {
         return this.delivery + this.itemsValue;
     };
+    __decorate([
+        Input(),
+        __metadata("design:type", Number)
+    ], DeliveryCostsComponent.prototype, "delivery", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Number)
+    ], DeliveryCostsComponent.prototype, "itemsValue", void 0);
+    DeliveryCostsComponent = __decorate([
+        Component({
+            selector: 'mt-delivery-costs',
+            templateUrl: './delivery-costs.component.html',
+            styleUrls: ['./delivery-costs.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], DeliveryCostsComponent);
     return DeliveryCostsComponent;
 }());
-__decorate([
-    Input(),
-    __metadata("design:type", Number)
-], DeliveryCostsComponent.prototype, "delivery", void 0);
-__decorate([
-    Input(),
-    __metadata("design:type", Number)
-], DeliveryCostsComponent.prototype, "itemsValue", void 0);
-DeliveryCostsComponent = __decorate([
-    Component({
-        selector: 'mt-delivery-costs',
-        templateUrl: './delivery-costs.component.html',
-        styleUrls: ['./delivery-costs.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], DeliveryCostsComponent);
 export { DeliveryCostsComponent };
 //# sourceMappingURL=delivery-costs.component.js.map

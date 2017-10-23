@@ -13,13 +13,13 @@ var ROUTES = [
 var AboutModule = (function () {
     function AboutModule() {
     }
+    AboutModule = __decorate([
+        NgModule({
+            declarations: [AboutComponent],
+            imports: [RouterModule.forChild(ROUTES)]
+        })
+    ], AboutModule);
     return AboutModule;
 }());
-AboutModule = __decorate([
-    NgModule({
-        declarations: [AboutComponent],
-        imports: [RouterModule.forChild(ROUTES)]
-    })
-], AboutModule);
 export { AboutModule };
 //# sourceMappingURL=about.module.js.map

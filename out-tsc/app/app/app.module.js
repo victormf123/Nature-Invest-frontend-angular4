@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ROUTES } from './app.routes';
@@ -23,36 +23,40 @@ import { ReviewsComponent } from './restaurante-detail/reviews/reviews.component
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './security/login/login.component';
+import { UserDetailComponent } from './header/user-detail/user-detail.component';
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        NgModule({
+            declarations: [
+                AppComponent,
+                HeaderComponent,
+                HomeComponent,
+                RestaurantesComponent,
+                RestauranteComponent,
+                RestauranteDetailComponent,
+                ShoppingCartComponent,
+                MenuComponent,
+                MenuItemComponent,
+                ReviewsComponent,
+                OrderSummaryComponent,
+                NotFoundComponent,
+                LoginComponent,
+                UserDetailComponent,
+            ],
+            imports: [
+                BrowserModule,
+                HttpClientModule,
+                SharedModule.forRoot(),
+                RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
+            ],
+            providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, { provide: LOCALE_ID, useValue: 'pt-BR' }],
+            bootstrap: [AppComponent]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    NgModule({
-        declarations: [
-            AppComponent,
-            HeaderComponent,
-            HomeComponent,
-            RestaurantesComponent,
-            RestauranteComponent,
-            RestauranteDetailComponent,
-            ShoppingCartComponent,
-            MenuComponent,
-            MenuItemComponent,
-            ReviewsComponent,
-            OrderSummaryComponent,
-            NotFoundComponent,
-        ],
-        imports: [
-            BrowserModule,
-            HttpModule,
-            SharedModule.forRoot(),
-            RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules })
-        ],
-        providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }, { provide: LOCALE_ID, useValue: 'pt-BR' }],
-        bootstrap: [AppComponent]
-    })
-], AppModule);
 export { AppModule };
 //# sourceMappingURL=app.module.js.map

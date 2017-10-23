@@ -12,7 +12,8 @@ import { OrderService } from './order.service';
 import { OrderItem } from './order.model';
 import { Router } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
-var OrderComponent = OrderComponent_1 = (function () {
+import 'rxjs/add/operator/do';
+var OrderComponent = (function () {
     function OrderComponent(orderService, router, formBiulder) {
         this.orderService = orderService;
         this.router = router;
@@ -26,6 +27,7 @@ var OrderComponent = OrderComponent_1 = (function () {
         ];
         this.delivery = 8;
     }
+    OrderComponent_1 = OrderComponent;
     OrderComponent.prototype.ngOnInit = function () {
         this.orderForm = this.formBiulder.group({
             name: this.formBiulder.control('', [Validators.required, Validators.minLength(5)]),
@@ -63,10 +65,16 @@ var OrderComponent = OrderComponent_1 = (function () {
     OrderComponent.prototype.remove = function (item) {
         this.orderService.remove(item);
     };
+    OrderComponent.prototype.isOrderCompleted = function () {
+        return this.orderId !== undefined;
+    };
     OrderComponent.prototype.checkOrder = function (order) {
         var _this = this;
         order.orderItems = this.cartItems().map(function (item) { return new OrderItem(item.quantity, item.menuItem.id); });
         this.orderService.checkOrder(order)
+            .do(function (orderId) {
+            _this.orderId = orderId;
+        })
             .subscribe(function (orderId) {
             _this.router.navigate(['/order-summary']);
             console.log("Compra conclu\u00EDda: " + orderId);
@@ -74,18 +82,18 @@ var OrderComponent = OrderComponent_1 = (function () {
         });
         console.log(order);
     };
+    OrderComponent = OrderComponent_1 = __decorate([
+        Component({
+            selector: 'mt-order',
+            templateUrl: './order.component.html',
+            styleUrls: ['./order.component.css']
+        }),
+        __metadata("design:paramtypes", [OrderService,
+            Router,
+            FormBuilder])
+    ], OrderComponent);
     return OrderComponent;
+    var OrderComponent_1;
 }());
-OrderComponent = OrderComponent_1 = __decorate([
-    Component({
-        selector: 'mt-order',
-        templateUrl: './order.component.html',
-        styleUrls: ['./order.component.css']
-    }),
-    __metadata("design:paramtypes", [OrderService,
-        Router,
-        FormBuilder])
-], OrderComponent);
 export { OrderComponent };
-var OrderComponent_1;
 //# sourceMappingURL=order.component.js.map

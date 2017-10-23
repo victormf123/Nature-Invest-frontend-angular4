@@ -1,12 +1,13 @@
-import { Response } from '@angular/http';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-var AppErrorHandler = (function () {
-    function AppErrorHandler() {
+var ApplicationErrorHandler = (function () {
+    function ApplicationErrorHandler() {
     }
-    AppErrorHandler.handlerError = function (error) {
+    ApplicationErrorHandler.handlerError = function (error) {
         var errorMessage;
-        if (error instanceof Response) {
-            errorMessage = "Erro " + error.status + " ao obter a URL " + error.url + " - " + error.statusText;
+        if (error instanceof HttpErrorResponse) {
+            var body = error.error;
+            errorMessage = "Erro " + error.status + " ao obter a URL " + error.url + " - " + (error.statusText || '') + " " + body;
         }
         else {
             errorMessage = error.toString();
@@ -14,7 +15,7 @@ var AppErrorHandler = (function () {
         console.log(errorMessage);
         return Observable.throw(errorMessage);
     };
-    return AppErrorHandler;
+    return ApplicationErrorHandler;
 }());
-export { AppErrorHandler };
+export { ApplicationErrorHandler };
 //# sourceMappingURL=app.error-handler.js.map

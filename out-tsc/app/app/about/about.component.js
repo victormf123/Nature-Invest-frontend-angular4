@@ -13,15 +13,15 @@ var AboutComponent = (function () {
     }
     AboutComponent.prototype.ngOnInit = function () {
     };
+    AboutComponent = __decorate([
+        Component({
+            selector: 'mt-about',
+            templateUrl: './about.component.html',
+            styleUrls: ['./about.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutComponent);
     return AboutComponent;
 }());
-AboutComponent = __decorate([
-    Component({
-        selector: 'mt-about',
-        templateUrl: './about.component.html',
-        styleUrls: ['./about.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], AboutComponent);
 export { AboutComponent };
 //# sourceMappingURL=about.component.js.map

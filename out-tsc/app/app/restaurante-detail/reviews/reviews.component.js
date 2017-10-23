@@ -18,16 +18,16 @@ var ReviewsComponent = (function () {
     ReviewsComponent.prototype.ngOnInit = function () {
         this.reviews = this.restaurantesService.reviewsOfRestaurante(this.route.parent.snapshot.params['id']);
     };
+    ReviewsComponent = __decorate([
+        Component({
+            selector: 'mt-reviews',
+            templateUrl: './reviews.component.html',
+            styleUrls: ['./reviews.component.css']
+        }),
+        __metadata("design:paramtypes", [RestaurantesService,
+            ActivatedRoute])
+    ], ReviewsComponent);
     return ReviewsComponent;
 }());
-ReviewsComponent = __decorate([
-    Component({
-        selector: 'mt-reviews',
-        templateUrl: './reviews.component.html',
-        styleUrls: ['./reviews.component.css']
-    }),
-    __metadata("design:paramtypes", [RestaurantesService,
-        ActivatedRoute])
-], ReviewsComponent);
 export { ReviewsComponent };
 //# sourceMappingURL=reviews.component.js.map

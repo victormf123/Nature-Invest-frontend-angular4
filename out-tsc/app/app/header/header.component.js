@@ -13,15 +13,15 @@ var HeaderComponent = (function () {
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
+    HeaderComponent = __decorate([
+        Component({
+            selector: 'mt-header',
+            templateUrl: './header.component.html',
+            styleUrls: ['./header.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], HeaderComponent);
     return HeaderComponent;
 }());
-HeaderComponent = __decorate([
-    Component({
-        selector: 'mt-header',
-        templateUrl: './header.component.html',
-        styleUrls: ['./header.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], HeaderComponent);
 export { HeaderComponent };
 //# sourceMappingURL=header.component.js.map

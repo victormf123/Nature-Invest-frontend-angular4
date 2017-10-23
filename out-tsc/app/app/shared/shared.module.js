@@ -7,30 +7,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InputComponent } from './input/input.component';
 import { RadioComponent } from './radio/radio.component';
 import { RatingComponent } from './rating/rating.component';
 import { ShoppingCartService } from '../restaurante-detail/shopping-cart/shopping-cart.service';
 import { RestaurantesService } from '../restaurantes/restaurantes.service';
 import { OrderService } from '../order/order.service';
-var SharedModule = SharedModule_1 = (function () {
+import { LoginService } from '../security/login/login.service';
+import { LoggedinGuard } from '../security/loggedin.guard';
+import { LeaveOrderGuard } from '../order/leave-order.guard';
+import { AuthInterceptor } from '../security/auth.interceptor';
+var SharedModule = (function () {
     function SharedModule() {
     }
+    SharedModule_1 = SharedModule;
     SharedModule.forRoot = function () {
         return {
             ngModule: SharedModule_1,
-            providers: [ShoppingCartService, RestaurantesService, OrderService]
+            providers: [ShoppingCartService, RestaurantesService, OrderService, LoggedinGuard, LeaveOrderGuard, LoginService,
+                { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
         };
     };
+    SharedModule = SharedModule_1 = __decorate([
+        NgModule({
+            declarations: [InputComponent, RadioComponent, RatingComponent],
+            imports: [CommonModule, FormsModule, ReactiveFormsModule],
+            exports: [InputComponent, RadioComponent, RatingComponent, CommonModule, FormsModule, ReactiveFormsModule]
+        })
+    ], SharedModule);
     return SharedModule;
+    var SharedModule_1;
 }());
-SharedModule = SharedModule_1 = __decorate([
-    NgModule({
-        declarations: [InputComponent, RadioComponent, RatingComponent],
-        imports: [CommonModule, FormsModule, ReactiveFormsModule],
-        exports: [InputComponent, RadioComponent, RatingComponent, CommonModule, FormsModule, ReactiveFormsModule]
-    })
-], SharedModule);
 export { SharedModule };
-var SharedModule_1;
 //# sourceMappingURL=shared.module.js.map

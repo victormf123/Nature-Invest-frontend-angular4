@@ -13,19 +13,19 @@ var RestauranteComponent = (function () {
     }
     RestauranteComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Input(),
+        __metadata("design:type", Object)
+    ], RestauranteComponent.prototype, "restaurante", void 0);
+    RestauranteComponent = __decorate([
+        Component({
+            selector: 'mt-restaurante',
+            templateUrl: './restaurante.component.html',
+            styleUrls: ['./restaurante.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], RestauranteComponent);
     return RestauranteComponent;
 }());
-__decorate([
-    Input(),
-    __metadata("design:type", Object)
-], RestauranteComponent.prototype, "restaurante", void 0);
-RestauranteComponent = __decorate([
-    Component({
-        selector: 'mt-restaurante',
-        templateUrl: './restaurante.component.html',
-        styleUrls: ['./restaurante.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], RestauranteComponent);
 export { RestauranteComponent };
 //# sourceMappingURL=restaurante.component.js.map

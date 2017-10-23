@@ -33,19 +33,19 @@ var RatingComponent = (function () {
         }
         this.previousRate = undefined;
     };
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], RatingComponent.prototype, "rated", void 0);
+    RatingComponent = __decorate([
+        Component({
+            selector: 'mt-rating',
+            templateUrl: './rating.component.html',
+            styleUrls: ['./rating.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], RatingComponent);
     return RatingComponent;
 }());
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], RatingComponent.prototype, "rated", void 0);
-RatingComponent = __decorate([
-    Component({
-        selector: 'mt-rating',
-        templateUrl: './rating.component.html',
-        styleUrls: ['./rating.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], RatingComponent);
 export { RatingComponent };
 //# sourceMappingURL=rating.component.js.map

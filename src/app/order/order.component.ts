@@ -5,6 +5,7 @@ import {CartItemModel} from '../restaurante-detail/shopping-cart/cart-item.model
 import {Order, OrderItem} from './order.model';
 import {Router} from '@angular/router';
 import {FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/forms';
+import 'rxjs/add/operator/do';
 
 @Component({
   selector: 'mt-order',
@@ -14,6 +15,8 @@ import {FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/form
 export class OrderComponent implements OnInit {
 
   orderForm: FormGroup;
+
+  orderId: string;
 
   emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i ;
 
@@ -74,13 +77,21 @@ export class OrderComponent implements OnInit {
     this.orderService.remove(item);
   }
 
+  isOrderCompleted(): boolean {
+    return this.orderId !== undefined;
+  }
+
   checkOrder(order: Order) {
     order.orderItems = this.cartItems().map((item: CartItemModel) => new OrderItem(item.quantity, item.menuItem.id));
+
     this.orderService.checkOrder(order)
+      .do((orderId: string) => {
+        this.orderId = orderId;
+      })
       .subscribe((orderId: string) => {
-      this.router.navigate(['/order-summary']);
-      console.log(`Compra concluída: ${orderId}`);
-      this.orderService.clear();
+        this.router.navigate(['/order-summary']);
+        console.log(`Compra concluída: ${orderId}`);
+        this.orderService.clear();
     });
     console.log(order);
   }

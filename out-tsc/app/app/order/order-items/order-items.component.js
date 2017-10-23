@@ -25,31 +25,31 @@ var OrderItemsComponent = (function () {
     OrderItemsComponent.prototype.emitRemove = function (item) {
         this.remove.emit(item);
     };
+    __decorate([
+        Input(),
+        __metadata("design:type", Array)
+    ], OrderItemsComponent.prototype, "items", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], OrderItemsComponent.prototype, "increaseQty", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], OrderItemsComponent.prototype, "decreaseQty", void 0);
+    __decorate([
+        Output(),
+        __metadata("design:type", Object)
+    ], OrderItemsComponent.prototype, "remove", void 0);
+    OrderItemsComponent = __decorate([
+        Component({
+            selector: 'mt-order-items',
+            templateUrl: './order-items.component.html',
+            styleUrls: ['./order-items.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], OrderItemsComponent);
     return OrderItemsComponent;
 }());
-__decorate([
-    Input(),
-    __metadata("design:type", Array)
-], OrderItemsComponent.prototype, "items", void 0);
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], OrderItemsComponent.prototype, "increaseQty", void 0);
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], OrderItemsComponent.prototype, "decreaseQty", void 0);
-__decorate([
-    Output(),
-    __metadata("design:type", Object)
-], OrderItemsComponent.prototype, "remove", void 0);
-OrderItemsComponent = __decorate([
-    Component({
-        selector: 'mt-order-items',
-        templateUrl: './order-items.component.html',
-        styleUrls: ['./order-items.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], OrderItemsComponent);
 export { OrderItemsComponent };
 //# sourceMappingURL=order-items.component.js.map

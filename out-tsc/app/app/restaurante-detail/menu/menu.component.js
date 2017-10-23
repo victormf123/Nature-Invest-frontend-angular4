@@ -22,16 +22,16 @@ var MenuComponent = (function () {
     MenuComponent.prototype.addMenuItem = function (item) {
         console.log(item);
     };
+    MenuComponent = __decorate([
+        Component({
+            selector: 'mt-menu',
+            templateUrl: './menu.component.html',
+            styleUrls: ['./menu.component.css']
+        }),
+        __metadata("design:paramtypes", [RestaurantesService,
+            ActivatedRoute])
+    ], MenuComponent);
     return MenuComponent;
 }());
-MenuComponent = __decorate([
-    Component({
-        selector: 'mt-menu',
-        templateUrl: './menu.component.html',
-        styleUrls: ['./menu.component.css']
-    }),
-    __metadata("design:paramtypes", [RestaurantesService,
-        ActivatedRoute])
-], MenuComponent);
 export { MenuComponent };
 //# sourceMappingURL=menu.component.js.map

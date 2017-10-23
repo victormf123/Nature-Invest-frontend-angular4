@@ -20,16 +20,16 @@ var RestauranteDetailComponent = (function () {
         this.restaurantesService.restaurantById(this.route.snapshot.params['id'])
             .subscribe(function (restaurante) { return _this.restaurante = restaurante; });
     };
+    RestauranteDetailComponent = __decorate([
+        Component({
+            selector: 'mt-restaurante-detail',
+            templateUrl: './restaurante-detail.component.html',
+            styleUrls: ['./restaurante-detail.component.css']
+        }),
+        __metadata("design:paramtypes", [RestaurantesService,
+            ActivatedRoute])
+    ], RestauranteDetailComponent);
     return RestauranteDetailComponent;
 }());
-RestauranteDetailComponent = __decorate([
-    Component({
-        selector: 'mt-restaurante-detail',
-        templateUrl: './restaurante-detail.component.html',
-        styleUrls: ['./restaurante-detail.component.css']
-    }),
-    __metadata("design:paramtypes", [RestaurantesService,
-        ActivatedRoute])
-], RestauranteDetailComponent);
 export { RestauranteDetailComponent };
 //# sourceMappingURL=restaurante-detail.component.js.map

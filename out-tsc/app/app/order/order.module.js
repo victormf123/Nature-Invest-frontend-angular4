@@ -10,19 +10,20 @@ import { RouterModule } from '@angular/router';
 import { OrderComponent } from './order.component';
 import { OrderItemsComponent } from './order-items/order-items.component';
 import { DeliveryCostsComponent } from './delivery-costs/delivery-costs.component';
+import { LeaveOrderGuard } from './leave-order.guard';
 var ROUTES = [
-    { path: '', component: OrderComponent }
+    { path: '', component: OrderComponent, canDeactivate: [LeaveOrderGuard] }
 ];
 var OrderModule = (function () {
     function OrderModule() {
     }
+    OrderModule = __decorate([
+        NgModule({
+            declarations: [OrderComponent, OrderItemsComponent, DeliveryCostsComponent],
+            imports: [SharedModule, RouterModule.forChild(ROUTES)]
+        })
+    ], OrderModule);
     return OrderModule;
 }());
-OrderModule = __decorate([
-    NgModule({
-        declarations: [OrderComponent, OrderItemsComponent, DeliveryCostsComponent],
-        imports: [SharedModule, RouterModule.forChild(ROUTES)]
-    })
-], OrderModule);
 export { OrderModule };
 //# sourceMappingURL=order.module.js.map
