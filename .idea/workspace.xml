@@ -1,100 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac75ba2a-e769-40f4-81cb-27e58a950eec" name="Default" comment="teste">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/6a26ed1_passo-02_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/7c892ff_passo-03_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/css/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/css/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/css/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/d5dc124_passo-01_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/fonts/icomoon.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/fonts/icomoon.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/fonts/icomoon.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/marca-nature-invest-footer.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/marca-nature-invest.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/slider-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/slider-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/slider-3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/user.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/campanha.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/campanha.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/campanha.model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/campanha.model.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/campanha.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/campanha.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/categorias-campanha/categorias-campanha.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/categorias-campanha/categorias-campanha.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/categorias-campanha/categorias-campanha.model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/categorias-campanha/categorias-campanha.model.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/categorias-campanha/categorias-campanha.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/categorias-campanha/categorias-campanha.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/equipe.model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/equipe.model.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/equipe.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/equipe.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/equipeModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/equipeModel.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/form-equipe.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-equipe/form-equipe.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-recompensa/form-recompensa.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-recompensa/form-recompensa.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-recompensa/recompensa.model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-recompensa/recompensa.model.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-recompensa/recompensa.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/form-recompensa/recompensa.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.model.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.model.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.service.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/campanha/input-impacto/input-impacto.service.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/datapicker-range/datapicker-range.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/datapicker-range/datapicker-range.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/input-file/input-file.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/input-file/input-file.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/input-impacto-quantitativo/input-impacto-quantitativo.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/input-impacto-quantitativo/input-impacto-quantitativo.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/upload-file/upload-file.component.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/upload-file/upload-file.component.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/shared/datapicker-range/datapicker-range.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/shared/datapicker-range/datapicker-range.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/shared/datapicker-range/datapicker-range.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/shared/upload-file/upload-file.component.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/shared/upload-file/upload-file.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/app/shared/upload-file/upload-file.component.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/css/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/css/selection.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/img/fonts/icomoon.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/selection.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="ac75ba2a-e769-40f4-81cb-27e58a950eec" name="Default" comment="Component de Formularios Feitos, falta fazer a comunicaçao com o backend">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/@angular/animations/package.json" afterPath="$PROJECT_DIR$/node_modules/@angular/animations/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js" afterPath="$PROJECT_DIR$/out-tsc/app/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-tsc/app/app/app.module.js.map" afterPath="$PROJECT_DIR$/out-tsc/app/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-tsc/app/app/app.routes.js" afterPath="$PROJECT_DIR$/out-tsc/app/app/app.routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-tsc/app/app/app.routes.js.map" afterPath="$PROJECT_DIR$/out-tsc/app/app/app.routes.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-tsc/app/app/shared/shared.module.js" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/shared.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out-tsc/app/app/shared/shared.module.js.map" afterPath="$PROJECT_DIR$/out-tsc/app/app/shared/shared.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.module.ts" afterPath="$PROJECT_DIR$/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/app.routes.ts" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/header/header.component.css" afterPath="$PROJECT_DIR$/src/app/header/header.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/header/header.component.html" afterPath="$PROJECT_DIR$/src/app/header/header.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/header/user-detail/user-detail.component.css" afterPath="$PROJECT_DIR$/src/app/header/user-detail/user-detail.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/header/user-detail/user-detail.component.html" afterPath="$PROJECT_DIR$/src/app/header/user-detail/user-detail.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/shared/input/input.component.html" afterPath="$PROJECT_DIR$/src/app/shared/input/input.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/shared/shared.module.ts" afterPath="$PROJECT_DIR$/src/app/shared/shared.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.html" afterPath="$PROJECT_DIR$/src/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -133,8 +41,8 @@
       <file leaf-file-name="campanha.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/campanha/campanha.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+            <state relative-caret-position="360">
+              <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#7;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -187,12 +95,18 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="victormf123 &lt;victormf.df@hotmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="SIGN_OFF_COMMIT" value="true" />
     <favorite-branches>
       <branch-storage>
         <map>
@@ -460,7 +374,7 @@
       <workItem from="1508728600009" duration="738000" />
       <workItem from="1508730505400" duration="220000" />
       <workItem from="1509552539671" duration="59000" />
-      <workItem from="1509667833326" duration="90330000" />
+      <workItem from="1509667833326" duration="94103000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1508719810871</created>
@@ -476,24 +390,31 @@
       <option name="project" value="LOCAL" />
       <updated>1508729583236</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Component de Formularios Feitos, falta fazer a comunicaçao com o backend">
+      <created>1510106668666</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1510106668666</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184838000" />
+    <option name="totallyTimeSpent" value="188611000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1440" y="-36" width="1440" height="826" extended-state="0" />
     <layout>
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22057787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22057787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.50328946" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28454173" sideWeight="0.50599015" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.49342105" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28454173" sideWeight="0.49671054" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28454173" sideWeight="0.49400985" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -593,7 +514,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste" />
+    <MESSAGE value="Component de Formularios Feitos, falta fazer a comunicaçao com o backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Component de Formularios Feitos, falta fazer a comunicaçao com o backend" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1034,8 +956,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/campanha/campanha.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        <state relative-caret-position="360">
+          <caret line="24" column="66" lean-forward="false" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#7;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
