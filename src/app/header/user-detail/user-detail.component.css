@@ -2,10 +2,10 @@
   position: relative;
   display: block;
   padding: 15px 15px;
-  color: #fff;
+  color: #000;
 }
 .user-menu a{
-  color: #fff;
+  color: #000;
   cursor: pointer
 }
 @media (max-width: 991px){
@@ -14,5 +14,11 @@
     position: absolute;
     top: 0;
     right: 40px;
+  }
+  .btn-entrar {
+    color: #000;
+  }
+  .box-login {
+    color: #000;
   }
 }

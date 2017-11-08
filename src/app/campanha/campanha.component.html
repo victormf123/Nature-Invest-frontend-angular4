@@ -1,0 +1,147 @@
+
+<div class="row" style="margin-top: 100px">
+  <div class="col-8">
+    <form [formGroup]="campanhaForm" novalidate>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3">Informações Gerais do Projeto</h1>
+          <p class="lead">Olá! tudo bem ? Importante você fazer uma boa descrição, para seu projeto ser aprovado rapidamente.</p>
+          {{ campanhaForm.valid }}
+          {{ campanhaForm.value | json }}
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="arquivoInput" class="col-sm-2 col-form-label">Upload Imagem</label>
+        <div class="col-sm-10">
+          <input type="file" name="imagem" class="form-control-file" id="arquivoInput">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="FormControlSelectCategoria" class="col-form-label">Categoria</label>
+          <select class="form-control" formControlName="categoria" id="FormControlSelectCategoria" required>
+            <option *ngFor="let item of categorias" [ngValue]="item">{{item.name}}</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="InputTitulo" class="col-form-label">Titulo</label>
+        <input type="text" formControlName="titulo" class="form-control" id="InputTitulo" placeholder="Titulo do Projeto">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="InputOrcamento" class="col-form-label">Orcamento</label>
+          <input type="text" formControlName="orcamento" class="form-control" id="InputOrcamento" placeholder="20000.00">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="FormControlSelect" class="col-form-label">Moeda:</label>
+          <select formControlName="moeda" class="form-control" id="FormControlSelect">
+            <option selected="selected">BRL</option>
+            <option>EUR</option>
+            <option>USD</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputAddress" class="col-form-label">Endereço</label>
+        <input type="text" formControlName="endereco" class="form-control" id="inputAddress" placeholder="1234 Main St">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="inputEstado" class="col-form-label">Estado</label>
+          <select id="inputEstado" formControlName="estado" class="form-control">
+            <option selected="selected">Brasília</option>
+            <option>São Paulo</option>
+            <option>Rio de Janeiro</option>
+          </select>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputCep" class="col-form-label">Cep</label>
+          <input type="text" formControlName="cep" class="form-control" placeholder="724567-765" id="inputCep">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputTelefone" class="col-form-label">Telefone</label>
+          <input type="text" formControlName="telefone" class="form-control" id="inputTelefone">
+        </div>
+      </div>
+      <div class="form-row" style="margin-bottom: 25px">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <label for="datapicker" class="col-form-label">Duração:</label>
+            <mt-datapicker-range id="datapicker" ></mt-datapicker-range>
+          </div>
+          <div class="col-md-1"></div>
+      </div>
+      <mt-input-impacto [items]="inpactosQuatitativos()"></mt-input-impacto>
+      <br>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="FormControlTextareaCodeYoutube">Codigo video Youtube</label>
+          <textarea class="form-control" formControlName="link_youtube" id="FormControlTextareaCodeYoutube" placeholder="<iframe width='640 height='360 src=https://www.youtube.com/embed/p_c0kNKy3C4' frameborder='0' allowfullscreen></iframe>" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="FormControlTextareaDescricaoProjeto">Descrição do Projeto</label>
+          <textarea class="form-control" formControlName="descricao_projeto" id="FormControlTextareaDescricaoProjeto" rows="15"></textarea>
+        </div>
+      </div>
+
+      <div class="form-row jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3">Informações Equipe</h1>
+          <p class="lead">No caso de você ter mais pessoas trabalhando com você, por que não colcar algumas informações dessas pessoas ? os campos a baixo são para isso.</p>
+        </div>
+      </div>
+
+      <mt-form-equipe [items]="equipe()"></mt-form-equipe>
+
+      <div class="form-row jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-3">Recompensas</h1>
+          <p class="lead">Para ajudar o seu projeto a alcançar mais doações, oferece uma recompensas por quantia doada, lembre-se recompensa não e obrigatoria, caso seu projeto não tenha recompensas apenas marque o chackbox</p>
+        </div>
+      </div>
+
+      <mt-form-recompensa [items]="recompensas()"></mt-form-recompensa>
+
+      <button type="submit" (click)="enviarForm(campanhaForm.value)" [disabled]="" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <img class="card-img-top" src="" alt="">
+      <div class="card-body">
+        <h4 class="card-title">{{campanhaForm.value.titulo}}</h4>
+        <h6 class="card-subtitle mb-2 text-muted"> </h6>
+        <p class="card-text text-justify descricoes_destaque">{{campanhaForm.value.descricao_projeto}}</p>
+      </div>
+      <hr>
+      <table class="table informacoes" style="width: 100%" align="center">
+        <tr>
+          <td><span class="iconsize {{ campanhaForm.value.categoria.icon }}"></span></td>
+          <td>{{campanhaForm.value.categoria.name }}</td>
+        </tr>
+        <tr>
+          <td><span class="iconsize icon-localizacao"></span></td>
+          <td>{{ campanhaForm.value.estado }}</td>
+        </tr>
+        <tr>
+          <td> {{ campanhaForm.value.moeda }}</td>
+          <td *ngIf="campanhaForm.value.moeda !== ''"> {{ campanhaForm.value.orcamento | currency: campanhaForm.value.moeda : true }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<!-- FIM DO CONTEUDO-->

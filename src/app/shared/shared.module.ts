@@ -1,7 +1,9 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import {NgbModule, NgbCalendar, NgbModalModule} from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {HTTP_INTERCEPTORS} from '@angular/common/http'
+
 
 import { InputComponent } from './input/input.component';
 import { RadioComponent} from './radio/radio.component';
@@ -13,13 +15,30 @@ import { LoginService } from '../security/login/login.service';
 import {LoggedinGuard} from '../security/loggedin.guard';
 import {LeaveOrderGuard} from '../order/leave-order.guard';
 import {AuthInterceptor} from '../security/auth.interceptor';
+import { DatapickerRangeComponent } from './datapicker-range/datapicker-range.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
+
 
 
 
 @NgModule({
-  declarations: [ InputComponent, RadioComponent, RatingComponent],
-  imports: [ CommonModule, FormsModule, ReactiveFormsModule ],
-  exports: [InputComponent, RadioComponent, RatingComponent, CommonModule, FormsModule, ReactiveFormsModule]
+  declarations: [
+    InputComponent,
+    RadioComponent,
+    RatingComponent,
+    DatapickerRangeComponent,
+    UploadFileComponent,
+  ],
+  imports: [ NgbModule, CommonModule, FormsModule, ReactiveFormsModule],
+  exports: [
+    InputComponent,
+    RadioComponent,
+    RatingComponent,
+    CommonModule,
+    DatapickerRangeComponent,
+    FormsModule,
+    ReactiveFormsModule
+  ]
 })
 
 export class SharedModule {

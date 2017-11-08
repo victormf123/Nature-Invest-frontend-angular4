@@ -5,6 +5,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -18,6 +19,8 @@ import { LoginService } from '../security/login/login.service';
 import { LoggedinGuard } from '../security/loggedin.guard';
 import { LeaveOrderGuard } from '../order/leave-order.guard';
 import { AuthInterceptor } from '../security/auth.interceptor';
+import { DatapickerRangeComponent } from './datapicker-range/datapicker-range.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 var SharedModule = (function () {
     function SharedModule() {
     }
@@ -31,9 +34,23 @@ var SharedModule = (function () {
     };
     SharedModule = SharedModule_1 = __decorate([
         NgModule({
-            declarations: [InputComponent, RadioComponent, RatingComponent],
-            imports: [CommonModule, FormsModule, ReactiveFormsModule],
-            exports: [InputComponent, RadioComponent, RatingComponent, CommonModule, FormsModule, ReactiveFormsModule]
+            declarations: [
+                InputComponent,
+                RadioComponent,
+                RatingComponent,
+                DatapickerRangeComponent,
+                UploadFileComponent,
+            ],
+            imports: [NgbModule, CommonModule, FormsModule, ReactiveFormsModule],
+            exports: [
+                InputComponent,
+                RadioComponent,
+                RatingComponent,
+                CommonModule,
+                DatapickerRangeComponent,
+                FormsModule,
+                ReactiveFormsModule
+            ]
         })
     ], SharedModule);
     return SharedModule;

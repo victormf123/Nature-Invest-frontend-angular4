@@ -1,0 +1,95 @@
+
+<form #formRecompensa="ngForm" novalidate>
+  <div class="form-check">
+    <label class="form-check-label">
+      <input name="bool_recompensa"  #iptBool="ngModel"  ngModel class="form-check-input" type="checkbox" value="">
+      Com Recompensa
+    </label>
+  </div>
+
+  <div class="from-row" *ngIf="iptBool.value" >
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active">Recompensas</li>
+
+    </ol>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="InputOrcamentoRecompensa" class="col-form-label">Orcamento</label>
+        <input type="text" class="form-control" name="valor" ngModel id="InputOrcamentoRecompensa" placeholder="20000.00">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="FormControlSelectRecompensa" class="col-form-label">Moeda:</label>
+        <select class="form-control" name="moeda" ngModel id="FormControlSelectRecompensa">
+          <option selected="selected">BRL</option>
+          <option>EUR</option>
+          <option>USD</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="FormControlTextareaDescricaoRecompensa">Descrição</label>
+        <textarea class="form-control" id="FormControlTextareaDescricaoRecompensa" name="descricao" ngModel aria-describedby="descricaoRecompensaHelp" rows="15"></textarea>
+        <small id="descricaoRecompensaHelp" class="form-text text-muted">Faça uma chamada para o seu colaborador.</small>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="FormControlTextareaDetalhesRecompensa">Detalhes produto</label>
+        <textarea class="form-control" name="detalhes" ngModel id="FormControlTextareaDetalhesRecompensa" aria-describedby="DetalhesRecompensaHelp" rows="15"></textarea>
+        <small id="DetalhesRecompensaHelp" class="form-text text-muted">Detalhe o item que o colaborador receberá.</small>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <div class="form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" name="limit" #iptBoolLimit="ngModel" ngModel type="checkbox" value="false">
+            Limite de recompensas
+          </label>
+        </div>
+      </div>
+      <div class="form-group col-md-6" *ngIf="iptBoolLimit.value">
+        <label for="InputQuantidadeLimite" class="col-form-label">Quantidade</label>
+        <input type="number" class="form-control" name="valor_limit" ngModel id="InputQuantidadeLimite" placeholder="14">
+      </div>
+    </div>
+    <div class="form-group" >
+      <button type="button" (click)="addImpacto(formRecompensa.value)" class="btn btn-success">Adicionar Membro</button>
+    </div>
+  </div>
+</form>
+
+<div class="form-row col-md-12 table-responsive" style="margin-bottom: 15px" *ngIf="items.length > 0">
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active">Recompensas</li>
+  </ol>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th class="text-left"> Valor Pedido:</th>
+      <th class="text-left">Descrição Recompensa</th>
+      <th class="text-left">Detalhes Recompensa</th>
+      <td class="text-center">Limite</td>
+      <td class="text-center">Valor</td>
+      <th class="text-right"></th>
+    </tr>
+    </thead>
+    <tbody >
+    <tr *ngFor="let item of items">
+      <td class="text-left">{{item.valor | currency: item.moeda : true}}</td>
+      <td class="text-justify">{{item.descricao}}</td>
+      <td class="text-justify">{{item.detalhes}}}</td>
+      <td class="text-center">{{item.limit}}</td>
+      <td class="text-center">{{item.valor_limit}}</td>
+      <td class="text-center">
+        <a (click)="emitRemove(item)" class="btn btn-sm danger"><i class="fa fa-remove"></i></a>
+      </td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+
