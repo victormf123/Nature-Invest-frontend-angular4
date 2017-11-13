@@ -35,7 +35,10 @@ import { FormRecompensaComponent } from './campanha/form-recompensa/form-recompe
 import { FormEquipeComponent } from './campanha/form-equipe/form-equipe.component';
 import { EquipeService } from './campanha/form-equipe/equipe.service';
 import { RecompensaService } from './campanha/form-recompensa/recompensa.service';
-
+import { CampanhaService } from './campanha/campanha.service';
+import { FileDropDirective, FileSelectDirective } from 'ng2-file-upload';
+import { ImagePreviewComponent } from './campanha/image-preview.directive';
+import { DatapickerRangeService } from './shared/datapicker-range/datapicker-range.service';
 
 
 
@@ -44,7 +47,10 @@ import { RecompensaService } from './campanha/form-recompensa/recompensa.service
 
 @NgModule({
   declarations: [
+    FileDropDirective,
+    FileSelectDirective,
     AppComponent,
+    ImagePreviewComponent,
     HeaderComponent,
     HomeComponent,
     RestaurantesComponent,
@@ -74,7 +80,7 @@ import { RecompensaService } from './campanha/form-recompensa/recompensa.service
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules})
   ],
-  providers: [EquipeService, RecompensaService, InputImpactoService, CategoriasCampanhaService, {provide: LocationStrategy, useClass: HashLocationStrategy}, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [CampanhaService, DatapickerRangeService, EquipeService, RecompensaService, InputImpactoService, CategoriasCampanhaService, {provide: LocationStrategy, useClass: HashLocationStrategy}, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,14 +9,12 @@ import {LoginService} from './login/login.service';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private injector: Injector) {
-
-  }
+  constructor(private injector: Injector) { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const  loginService = this.injector.get(LoginService);
     if ( loginService.isLoogedIn()) {
-      const authRequest = request.clone({setHeaders: {'Authorization': `Bearer ${loginService.user.token}`}})
+      const authRequest = request.clone({setHeaders: {'Authorization': `${loginService.user.token}`}})
       return next.handle(authRequest)
     }else {
       return next.handle(request);

@@ -7,5 +7,7 @@ export const environment = {
   production: false,
   api: 'http://localhost:3000',
   aopi: 'http://localhost:3003/oapi',
-  private_api:  'http://localhost:3003/api'
+  private_api:  'http://localhost:3003/api',
+  api_upload:  'http://localhost:8003/api',
+  image_save_api: 'http://localhost:8003'
 };

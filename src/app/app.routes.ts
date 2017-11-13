@@ -11,19 +11,19 @@ import {LoggedinGuard} from './security/loggedin.guard';
 import {CampanhaComponent} from './campanha/campanha.component';
 
 export const ROUTES: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'login/:to', component: LoginComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'restaurantes/:id', component: RestauranteDetailComponent,
+  { path: '', component: HomeComponent},
+  { path: 'login/:to', component: LoginComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'restaurantes/:id', component: RestauranteDetailComponent,
     children: [
-      {path: '', redirectTo: 'menu', pathMatch: 'full'},
-      {path: 'menu', component: MenuComponent},
-      {path: 'reviews', component: ReviewsComponent}
+      { path: '', redirectTo: 'menu', pathMatch: 'full'},
+      { path: 'menu', component: MenuComponent},
+      { path: 'reviews', component: ReviewsComponent}
     ]},
-  {path: 'campanha', component: CampanhaComponent },
-  {path: 'restaurantes', component: RestaurantesComponent },
-  {path: 'order-summary', component: OrderSummaryComponent},
-  {path: 'order', loadChildren: './order/order.module#OrderModule', canLoad: [LoggedinGuard], canActivate: [LoggedinGuard]},
-  {path: 'about', loadChildren: './about/about.module#AboutModule' },
-  {path: '**', component: NotFoundComponent }
+  { path: 'campanha', component: CampanhaComponent },
+  { path: 'restaurantes', component: RestaurantesComponent },
+  { path: 'order-summary', component: OrderSummaryComponent},
+  { path: 'order', loadChildren: './order/order.module#OrderModule', canLoad: [LoggedinGuard], canActivate: [LoggedinGuard]},
+  { path: 'about', loadChildren: './about/about.module#AboutModule' },
+  { path: '**', component: NotFoundComponent }
 ];

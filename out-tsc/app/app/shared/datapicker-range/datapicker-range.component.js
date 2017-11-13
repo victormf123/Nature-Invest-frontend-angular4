@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { DatapickerRangeService } from './datapicker-range.service';
 var equals = function (one, two) {
     return one && two && two.year === one.year && two.month === one.month && two.day === one.day;
 };
@@ -22,12 +23,13 @@ var after = function (one, two) {
 };
 var now = new Date();
 var DatapickerRangeComponent = (function () {
-    function DatapickerRangeComponent(calendar) {
+    function DatapickerRangeComponent(calendar, datapickerRangeService) {
         var _this = this;
+        this.datapickerRangeService = datapickerRangeService;
         this.isHovered = function (date) { return _this.fromDate && !_this.toDate && _this.hoveredDate && after(date, _this.fromDate) && before(date, _this.hoveredDate); };
         this.isInside = function (date) { return after(date, _this.fromDate) && before(date, _this.toDate); };
-        this.isFrom = function (date) { return equals(date, _this.fromDate); };
-        this.isTo = function (date) { return equals(date, _this.toDate); };
+        this.isFrom = function (date) { equals(date, _this.fromDate); _this.datapickerRangeService.getDataInicial(_this.fromDate); };
+        this.isTo = function (date) { equals(date, _this.toDate); _this.datapickerRangeService.getDataFinal(_this.toDate); };
         this.fromDate = calendar.getToday();
         this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
     }
@@ -49,7 +51,7 @@ var DatapickerRangeComponent = (function () {
             templateUrl: './datapicker-range.component.html',
             styleUrls: ['./datapicker-range.component.css']
         }),
-        __metadata("design:paramtypes", [NgbCalendar])
+        __metadata("design:paramtypes", [NgbCalendar, DatapickerRangeService])
     ], DatapickerRangeComponent);
     return DatapickerRangeComponent;
 }());

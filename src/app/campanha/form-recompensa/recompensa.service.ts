@@ -5,9 +5,13 @@ import {RecompensasModel} from './recompensa.model';
 @Injectable()
 export  class RecompensaService {
   items: RecompensasModel[] = [];
+  bool: boolean;
 
   Recompensa(): RecompensasModel[] {
     return this.items;
+  }
+  getBool(): boolean {
+    return this.bool
   }
   clear() {
     this.items = [];

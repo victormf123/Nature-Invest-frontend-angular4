@@ -3,27 +3,28 @@ import { EquipeModel } from './form-equipe/equipe.model';
 import { RecompensasModel } from './form-recompensa/recompensa.model';
 
 export interface CampanhaModel {
-  _id: string;
-  titulo: string;
-  orcamento: number;
-  imagem: number;
-  estado: string;
-  endereco: string;
+  _id: string,
+  titulo: string,
+  orcamento: number,
+  moeda: string,
+  status: string,
+  imagem: string,
+  estado: string,
+  endereco: string,
   cep: string,
   telefone: string,
-  sataInicial: string,
+  dataInicial: string,
   dataFinal: string,
   link_youtube: string,
-  descricao_projecto: string,
+  descricao_projeto: string,
+  boolRecompensa: boolean,
   usuario: {
     email: string,
-    nome: string,
-    _id: string
+    name: string
   },
   categoria: {
     icon: string,
-    name: string,
-    _id: string
+    name: string
   },
   equipe: EquipeModel[],
   recompensas: RecompensasModel [],

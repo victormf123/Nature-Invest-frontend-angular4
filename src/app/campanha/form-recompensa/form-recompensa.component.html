@@ -1,13 +1,6 @@
 
 <form #formRecompensa="ngForm" novalidate>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input name="bool_recompensa"  #iptBool="ngModel"  ngModel class="form-check-input" type="checkbox" value="">
-      Com Recompensa
-    </label>
-  </div>
-
-  <div class="from-row" *ngIf="iptBool.value" >
+  <div class="from-row">
     <ol class="breadcrumb">
       <li class="breadcrumb-item active">Recompensas</li>
 

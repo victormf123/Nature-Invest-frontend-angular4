@@ -16,6 +16,7 @@ import { ShoppingCartService } from '../restaurante-detail/shopping-cart/shoppin
 import { RestaurantesService } from '../restaurantes/restaurantes.service';
 import { OrderService } from '../order/order.service';
 import { LoginService } from '../security/login/login.service';
+import { DatapickerRangeService } from './datapicker-range/datapicker-range.service';
 import { LoggedinGuard } from '../security/loggedin.guard';
 import { LeaveOrderGuard } from '../order/leave-order.guard';
 import { AuthInterceptor } from '../security/auth.interceptor';
@@ -28,7 +29,7 @@ var SharedModule = (function () {
     SharedModule.forRoot = function () {
         return {
             ngModule: SharedModule_1,
-            providers: [ShoppingCartService, RestaurantesService, OrderService, LoggedinGuard, LeaveOrderGuard, LoginService,
+            providers: [DatapickerRangeService, ShoppingCartService, RestaurantesService, OrderService, LoggedinGuard, LeaveOrderGuard, LoginService,
                 { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
         };
     };

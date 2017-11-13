@@ -1,5 +1,5 @@
 
-<div class="row" style="margin-top: 100px">
+<div class="row" style="margin: 100px 0px 100px 0px">
   <div class="col-8">
     <form [formGroup]="campanhaForm" novalidate>
       <div class="jumbotron jumbotron-fluid">
@@ -12,18 +12,23 @@
       </div>
 
       <div class="form-group row">
-        <label for="arquivoInput" class="col-sm-2 col-form-label">Upload Imagem</label>
-        <div class="col-sm-10">
-          <input type="file" name="imagem" class="form-control-file" id="arquivoInput">
+        <label class="col-sm-2 col-form-label">Upload Imagem</label>
+        <div ng2FileDrop  [uploader]="uploader">
+          <input type="file" ng2FileSelect [uploader]="uploader"/>
         </div>
+        <!--div class="col-sm-10" ng2FileDrop  [uploader]="uploader">
+          <input class="form-control-file" type="file" ng2FileSelect [uploader]="uploader" multiple >
+        </div-->
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="FormControlSelectCategoria" class="col-form-label">Categoria</label>
-          <select class="form-control" formControlName="categoria" id="FormControlSelectCategoria" required>
-            <option *ngFor="let item of categorias" [ngValue]="item">{{item.name}}</option>
-          </select>
+          <mt-input-container errorMessage="Campo obrigatorio!" label="Categoria">
+            <select class="form-control" formControlName="categoria" id="FormControlSelectCategoria" required>
+              <option *ngFor="let item of categorias" [ngValue]="item">{{item.name}}</option>
+            </select>
+          </mt-input-container>
         </div>
         <div class="form-group col-md-6">
 
@@ -31,45 +36,61 @@
       </div>
       <div class="form-group">
         <label for="InputTitulo" class="col-form-label">Titulo</label>
-        <input type="text" formControlName="titulo" class="form-control" id="InputTitulo" placeholder="Titulo do Projeto">
+        <mt-input-container errorMessage="Campo obrigatorio!" label="Titulo">
+          <input type="text" formControlName="titulo" class="form-control" id="InputTitulo" placeholder="Titulo do Projeto">
+        </mt-input-container>
+        
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="InputOrcamento" class="col-form-label">Orcamento</label>
-          <input type="text" formControlName="orcamento" class="form-control" id="InputOrcamento" placeholder="20000.00">
+          <mt-input-container errorMessage="Campo nulo / Digite apenas números." label="Orcamento">
+            <input type="text" formControlName="orcamento" class="form-control" id="InputOrcamento" placeholder="20000">
+          </mt-input-container>
+          
         </div>
         <div class="form-group col-md-6">
           <label for="FormControlSelect" class="col-form-label">Moeda:</label>
-          <select formControlName="moeda" class="form-control" id="FormControlSelect">
-            <option selected="selected">BRL</option>
-            <option>EUR</option>
-            <option>USD</option>
-          </select>
+          <mt-input-container errorMessage="Campo obrigatorio!" label="Moeda">
+            <select formControlName="moeda" class="form-control" id="FormControlSelect">
+              <option selected="selected">BRL</option>
+              <option>EUR</option>
+              <option>USD</option>
+            </select>
+          </mt-input-container>
         </div>
       </div>
 
       <div class="form-group">
         <label for="inputAddress" class="col-form-label">Endereço</label>
-        <input type="text" formControlName="endereco" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        <mt-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="Endereço">
+            <input type="text" formControlName="endereco" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </mt-input-container>
       </div>
 
       <div class="form-row">
         <div class="form-group col-md-4">
           <label for="inputEstado" class="col-form-label">Estado</label>
-          <select id="inputEstado" formControlName="estado" class="form-control">
-            <option selected="selected">Brasília</option>
-            <option>São Paulo</option>
-            <option>Rio de Janeiro</option>
-          </select>
+          <mt-input-container errorMessage="Campo obrigatório!" label="Estado">
+              <select id="inputEstado" formControlName="estado" class="form-control">
+                  <option selected="selected">Brasília</option>
+                  <option>São Paulo</option>
+                  <option>Rio de Janeiro</option>
+                </select>
+          </mt-input-container>
         </div>
         <div class="form-group col-md-4">
           <label for="inputCep" class="col-form-label">Cep</label>
-          <input type="text" formControlName="cep" class="form-control" placeholder="724567-765" id="inputCep">
+          <mt-input-container errorMessage="Campo nulo / Digite apenas números." label="Cep">
+              <input type="text" formControlName="cep" class="form-control" placeholder="724567765" id="inputCep">
+          </mt-input-container>
         </div>
         <div class="form-group col-md-4">
           <label for="inputTelefone" class="col-form-label">Telefone</label>
-          <input type="text" formControlName="telefone" class="form-control" id="inputTelefone">
+          <mt-input-container errorMessage="Campo nulo / Digite apenas números." label="Telefone">
+            <input type="text" formControlName="telefone" class="form-control" id="inputTelefone">
+          </mt-input-container>
         </div>
       </div>
       <div class="form-row" style="margin-bottom: 25px">
@@ -91,7 +112,7 @@
       <div class="form-row">
         <div class="form-group col-md-12">
           <label for="FormControlTextareaDescricaoProjeto">Descrição do Projeto</label>
-          <textarea class="form-control" formControlName="descricao_projeto" id="FormControlTextareaDescricaoProjeto" rows="15"></textarea>
+          <textarea class="form-control" formControlName="descricao_projeto" id="FormControlTextareaDescricaoProjeto" rows="5"></textarea>
         </div>
       </div>
 
@@ -111,14 +132,40 @@
         </div>
       </div>
 
-      <mt-form-recompensa [items]="recompensas()"></mt-form-recompensa>
+      <div class="form-check">
+          <label class="form-check-label">
+            <input formControlName="boolRecompensa"  class="form-check-input" type="checkbox" value="">
+            Com Recompensa
+          </label>
+        </div>
 
-      <button type="submit" (click)="enviarForm(campanhaForm.value)" [disabled]="" class="btn btn-primary">Enviar</button>
-    </form>
+      <mt-form-recompensa [items]="recompensas()"  *ngIf="campanhaForm.value.boolRecompensa"></mt-form-recompensa>
+
+      <button type="submit" (click)="enviarForm(campanhaForm.value)" [disabled]="!campanhaForm.valid" class="btn btn-primary">Enviar</button>
+    </form> <!-- !campanhaForm.valid -->
   </div>
   <div class="col-4">
     <div class="card">
-      <img class="card-img-top" src="" alt="">
+      <div *ngFor="let item of uploader.queue">
+          <img src="" imgPreview [image]="item?._file" class="img-responsive card-img-top" />
+
+        <table>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-success btn-xs"
+                        (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">
+                  <span class="glyphicon glyphicon-upload"></span> Upload
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger btn-xs"
+                      (click)="item.remove()">
+                <span class="glyphicon glyphicon-trash"></span> Remove
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
       <div class="card-body">
         <h4 class="card-title">{{campanhaForm.value.titulo}}</h4>
         <h6 class="card-subtitle mb-2 text-muted"> </h6>
