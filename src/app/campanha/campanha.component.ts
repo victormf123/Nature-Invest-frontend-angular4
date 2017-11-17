@@ -33,13 +33,7 @@ export class CampanhaComponent implements OnInit {
   campanhaForm: FormGroup
   numberPattern = /^[0-9]*$/;
   categorias: CategoriasCampanhaModel[];
-  uploader = new FileUploader({
-                                url: `http://localhost:8003/api/upload`,
-                                headers: [{
-                                  name:'Access-Control-Allow-Origin',
-                                  value:'http://localhost:4200'
-                                }]
-                              });
+  uploader = new FileUploader({ url: `http://localhost:8003/api/upload`});
 
   constructor(
               private categoriasCampanhaService: CategoriasCampanhaService,
@@ -50,7 +44,9 @@ export class CampanhaComponent implements OnInit {
               private recompensaService: RecompensaService,
               private campanhaService: CampanhaService,
               private datapickerRangeService: DatapickerRangeService,
-              private loginService: LoginService ) { }
+              private loginService: LoginService ) {
+
+               }
 
   inpactosQuatitativos(): impactosQuantitativosModel[] {
     return this.inputImpactoService.ImpactosQuantitativos();
@@ -69,6 +65,12 @@ export class CampanhaComponent implements OnInit {
   }
   getDataFinal(): NgbDateStruct {
     return this.datapickerRangeService.dataFinal;
+  }
+
+  uploadFile(file) {
+    console.log(file)
+    this.uploader.
+    this.uploader.uploadItem(file)
   }
 
 

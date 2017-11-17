@@ -5,8 +5,6 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { ImageUploadModule } from 'angular2-image-upload';
 
 
 import {ROUTES} from './app.routes';
@@ -73,9 +71,8 @@ import { DatapickerRangeService } from './shared/datapicker-range/datapicker-ran
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+
     HttpClientModule,
-    ImageUploadModule.forRoot(),
     NgbModule.forRoot(),
     SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules})
