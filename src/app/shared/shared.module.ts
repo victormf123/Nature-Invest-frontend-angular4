@@ -46,6 +46,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
+      // tslint:disable-next-line:max-line-length
       providers: [DatapickerRangeService, ShoppingCartService, RestaurantesService, OrderService, LoggedinGuard, LeaveOrderGuard, LoginService,
         { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
     }

@@ -1,18 +1,20 @@
 
 
 import {CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot} from '@angular/router';
-import {OrderComponent} from './order.component';
+import {CampanhaComponent} from './campanha.component';
 
-export class LeaveOrderGuard implements CanDeactivate<OrderComponent> {
+export class LeaveCampanhaGuard implements CanDeactivate<CampanhaComponent> {
 
 
-  canDeactivate(orderComponent: OrderComponent,
+  canDeactivate(campanhaComponent: CampanhaComponent,
                 activatedRoute: ActivatedRouteSnapshot,
                 routerStateSnapshot: RouterStateSnapshot): boolean {
-    if (!orderComponent.isOrderCompleted()) {
+                console.log('Entrou leave Quard');
+                return true;
+   /*if (!CampanhaComponent) {
       return window.confirm('Deseja desistir da compra?')
     }else {
       return true;
-    }
+    }*/
   }
 }

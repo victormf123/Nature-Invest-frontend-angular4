@@ -151,7 +151,7 @@
           <tr>
             <td>
               <button type="button" class="btn btn-success btn-xs"
-                        (click)="this.uploadFile(item)" [disabled]="item.isReady || item.isUploading || item.isSuccess">
+                        (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess"> 
                   <span class="glyphicon glyphicon-upload"></span> Upload
               </button>
             </td>

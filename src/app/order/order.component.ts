@@ -47,6 +47,7 @@ export class OrderComponent implements OnInit {
     }, {validator: OrderComponent.equalsTo});
   }
 
+  // tslint:disable-next-line:member-ordering
   static equalsTo(group: AbstractControl): {[key: string]: boolean} {
     const email = group.get('email');
     const emailConfirmation = group.get('emailConfirmation');
