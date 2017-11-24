@@ -32,6 +32,8 @@ import { CampanhaService } from './campanha/campanha.service';
 import { DatapickerRangeService } from './shared/datapicker-range/datapicker-range.service';
 import { SingleViewComponent } from './single-view/single-view.component';
 
+import { CarouselModule } from 'angular4-carousel';
+
 
 
 
@@ -57,6 +59,7 @@ import { SingleViewComponent } from './single-view/single-view.component';
   ],
   imports: [
     BrowserModule,
+    CarouselModule,
     FormsModule,
     HttpClientModule,
     NgbModule.forRoot(),
