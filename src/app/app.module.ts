@@ -31,6 +31,7 @@ import { RecompensaService } from './campanha/form-recompensa/recompensa.service
 import { CampanhaService } from './campanha/campanha.service';
 import { DatapickerRangeService } from './shared/datapicker-range/datapicker-range.service';
 import { SingleViewComponent } from './single-view/single-view.component';
+import { ReviewRecompensaComponent } from './campanha/review-recompensa/review-recompensa.component';
 
 
 
@@ -40,6 +41,7 @@ import { SingleViewComponent } from './single-view/single-view.component';
 @NgModule({
   declarations: [
     AppComponent,
+    ReviewRecompensaComponent,
     HeaderComponent,
     HomeComponent,
     RestaurantesComponent,

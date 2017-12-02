@@ -12,6 +12,7 @@ import {InputImpactoComponent} from './input-impacto/input-impacto.component';
 import { ImagePreviewComponent } from './image-preview.directive';
 import { FileUploadModule } from 'ng2-file-upload';
 
+
 const ROUTES: Routes = [
   { path: '', component: CampanhaComponent }
 ];
