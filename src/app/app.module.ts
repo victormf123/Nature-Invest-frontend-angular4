@@ -44,7 +44,6 @@ import { DestaquesRetafinalComponent } from './home/destaques-retafinal/destaque
 @NgModule({
   declarations: [
     AppComponent,
-    ReviewRecompensaComponent,
     HeaderComponent,
     HomeComponent,
     RestaurantesComponent,
