@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReviewRecompensaComponent } from '../campanha/review-recompensa/review-recompensa.component';
 
 @Component({
   selector: 'mt-single-view',
