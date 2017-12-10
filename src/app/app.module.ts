@@ -31,7 +31,10 @@ import { RecompensaService } from './campanha/form-recompensa/recompensa.service
 import { CampanhaService } from './campanha/campanha.service';
 import { DatapickerRangeService } from './shared/datapicker-range/datapicker-range.service';
 import { SingleViewComponent } from './single-view/single-view.component';
-import { ReviewRecompensaComponent } from './campanha/review-recompensa/review-recompensa.component';
+import { CarouselModule } from 'angular4-carousel';
+import { DestaqueTopComponent } from './home/destaque-top/destaque-top.component';
+import {DestaqueService} from './home/destaque-top/destaque.service';
+import { DestaquesRetafinalComponent } from './home/destaques-retafinal/destaques-retafinal.component';
 
 
 
@@ -56,9 +59,12 @@ import { ReviewRecompensaComponent } from './campanha/review-recompensa/review-r
     LoginComponent,
     UserDetailComponent,
     SingleViewComponent,
+    DestaqueTopComponent,
+    DestaquesRetafinalComponent,
   ],
   imports: [
     BrowserModule,
+    CarouselModule,
     FormsModule,
     HttpClientModule,
     NgbModule.forRoot(),
@@ -66,7 +72,7 @@ import { ReviewRecompensaComponent } from './campanha/review-recompensa/review-r
     RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules})
   ],
   // tslint:disable-next-line:max-line-length
-  providers: [CampanhaService, DatapickerRangeService, EquipeService, RecompensaService, InputImpactoService, CategoriasCampanhaService, {provide: LocationStrategy, useClass: HashLocationStrategy}, {provide: LOCALE_ID, useValue: 'pt-BR'}],
+  providers: [DestaqueService, CampanhaService, DatapickerRangeService, EquipeService, RecompensaService, InputImpactoService, CategoriasCampanhaService, {provide: LocationStrategy, useClass: HashLocationStrategy}, {provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

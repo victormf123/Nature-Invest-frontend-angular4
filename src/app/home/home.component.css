@@ -1,0 +1,45 @@
+.categoriasCampanha{
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.iconsize{
+    font-size: 25px;
+}
+#background{
+    z-index: 2;
+    position: absolute;
+    margin-top: -45px; 
+    width: 100%;
+}
+#marginTop {
+    margin-top: 25px; 
+}
+#height{
+    min-height: 435px;
+}
+.destaques{
+    background-color: #f3f4f5;
+    border: 0.5 px solid black;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    margin-left: -15px;
+
+}
+.espacoRight{
+    margin-bottom: 15px;
+}
+.categoriasLink {
+    font-size: 16px;
+    text-decoration: none;
+    color: #333333;
+}
+.texto-categoria {
+    top: 15px;
+}
+.iconsize{
+    font-size: 40px;
+}
+.categoriasLink:hover {
+    color: #016013;
+}
