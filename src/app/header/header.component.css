@@ -2,3 +2,9 @@
   height: 65px;
 }
 
+.main-header{
+  z-index: 1;
+}
+.nav-item{
+  z-index: 4;
+}

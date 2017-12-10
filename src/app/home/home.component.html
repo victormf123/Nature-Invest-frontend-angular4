@@ -1,35 +1,57 @@
-<section class="content-header">
+<section class="content-wapper">
+    <div id="height" class="content-fluid">
+        <img id="background" src="../../assets/img/background.png" class="img-responsive">
+      </div>
 </section>
+<div class="container">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <section class="content">
+        <div class="row">
+            <div style="width: 100%; height: 400px">
+                <carousel [sources]="imageSources" [config]="config">
+                </carousel>
+              </div>
+        </div>
+     Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row" >
+        <div class="col-4 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col"><h1 class="display-4">Categorias de Projetos</h1></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let item of categorias">
+                            <th scope="row">
+                              
+                                <a href="" class="text-center categoriasLink">
+                                    <i class="iconsize {{item.icon}}"></i>
+                                    <span class="texto-categoria">{{item.name}}</span>
+                                  </a>
+                            </th>  
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+             </div>
+        </div>
+        <div class="col-8 col-md-9 destaques" >
+              <h1 class="display-4">Projetos em destaque</h1>
+              <p class="lead">
+                  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+                </p>
+              <mt-destaque-top></mt-destaque-top>
+        </div>
+    </div>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-<section class="content">
     <div class="row">
-        <div style="width: 100%; height: 400px">
-            <carousel [sources]="imageSources" [config]="config">
-            </carousel>
-          </div>
+      <mt-destaques-retafinal></mt-destaques-retafinal>
     </div>
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-<div class="row" style="margin-top: 50px">
-    <div class="col-6 col-md-4">Aqui vai ser Imagem do Projeto</div>
-    <div class="col-6 col-md-4">Aqui vai ser preview descricao projeto</div>
-    <div class="col-6 col-md-4">
-        <ul>
-            <li class="categoriasCampanha" *ngFor="let item of categorias">
-                <a href="#" class="categoria mobilidade-urbana">
-                    <i class="iconsize {{item.icon}}"></i>
-                    <span class="espacoRight">{{item.name}}</span>
-                </a>
-            </li>
-            <li class="categoriasCampanha">
-                <a class="btn btn-success btn-lg" >VER MAIS CAMPANHAS</a>
-            </li>
-        </ul>
+</div>
 
-    </div>
-</div> 
-
-</section>
 
 
 <!-- INÍCIO DO CONTEÚDO
