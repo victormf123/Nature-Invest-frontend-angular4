@@ -1,0 +1,26 @@
+<div class="card-group">
+    <div class="card" *ngFor="let item of campanhasDestaqueRecemlancado">
+        <img src="{{item.imagem}}" class="img-responsive card-img-top" />
+        <div class="card-body">
+          <h4 class="card-title">{{item.titulo}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">{{item.usuario.name}} </h6>
+          <p class="card-text text-justify descricoes_destaque">{{item.descricao_projeto}}</p>
+        </div>
+        <hr>
+        <table class="table informacoes" style="width: 100%" align="center">
+          <tr>
+            <td><span class="iconsize {{item.categoria.icon}}"></span></td>
+            <td>{{item.categoria.name}}</td>
+          </tr>
+          <tr>
+            <td><span class="iconsize icon-localizacao"></span></td>
+            <td>{{item.estado}}</td>
+          </tr>
+          <tr>
+            <td> {{ item.moeda }} </td>
+            <td > {{ item.orcamento | currency: item.moeda.toString() : true }} </td>
+          </tr>
+        </table>
+    </div>
+  </div>
+  

@@ -16,4 +16,16 @@ export  class DestaqueService {
   campanhaDestaque(): Observable<DestaqueModel[]> {
     return this.http.get<DestaqueModel[]>(`${MEAT_OAPI}/destaqueTop`);
   }
+
+  getCampanhasRetaFinal(): Observable<DestaqueModel[]> {
+    return this.http.get<DestaqueModel[]>(`${MEAT_OAPI}/getCampanhasRetaFinal`);
+  }
+
+  getCampanhasCampanhasRecemLancados(): Observable<DestaqueModel[]> {
+    return this.http.get<DestaqueModel[]>(`${MEAT_OAPI}/getCampanhasCampanhasRecemLancados`);
+  }
+
+  getCampanhaById(id): Observable<DestaqueModel[]> {
+    return this.http.get<DestaqueModel[]>(`${MEAT_OAPI}/getCampanhaById/${id}`);
+  }
 }

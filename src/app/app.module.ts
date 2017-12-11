@@ -35,6 +35,7 @@ import { CarouselModule } from 'angular4-carousel';
 import { DestaqueTopComponent } from './home/destaque-top/destaque-top.component';
 import {DestaqueService} from './home/destaque-top/destaque.service';
 import { DestaquesRetafinalComponent } from './home/destaques-retafinal/destaques-retafinal.component';
+import { DestaqueRecemLancadosComponent } from './home/destaque-recem-lancados/destaque-recem-lancados.component';
 
 
 
@@ -60,6 +61,7 @@ import { DestaquesRetafinalComponent } from './home/destaques-retafinal/destaque
     SingleViewComponent,
     DestaqueTopComponent,
     DestaquesRetafinalComponent,
+    DestaqueRecemLancadosComponent,
   ],
   imports: [
     BrowserModule,

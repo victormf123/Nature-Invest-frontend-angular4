@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DestaqueModel} from '../destaque-top/destaque.model';
+import {DestaqueService} from '../destaque-top/destaque.service';
 
 @Component({
   selector: 'mt-destaques-retafinal',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DestaquesRetafinalComponent implements OnInit {
 
-  constructor() { }
+  campanhasDestaqueRetaFinal: DestaqueModel[];
+
+  constructor(private destaqueService:  DestaqueService) { }
 
   ngOnInit() {
+    this.destaqueService.getCampanhasRetaFinal().subscribe(destaque => { 
+      this.campanhasDestaqueRetaFinal = destaque
+    })
   }
 
 }
