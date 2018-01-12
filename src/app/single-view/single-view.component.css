@@ -1,3 +1,14 @@
-.div{
-	
+.btn-lembre{
+	float: left;
+}
+.marginTop {
+	margin-top: 15px;
+}
+.btns-redes {
+	margin-top: 10px;
+	margin-left: 50px; 
+}
+.icon-social-media {
+	background: transparent;
+	border: 0px;
 }
